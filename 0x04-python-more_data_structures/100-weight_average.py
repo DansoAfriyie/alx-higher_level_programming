@@ -1,9 +1,10 @@
-        current_value = romVal[roman_string[i]]
-        previous_value = romVal[roman_string[i-1]]
-
-        if previous_value >= current_value:
-            value_int += previous_value
-        else:
-            value_int -= previous_value
-
-    return value_int
+#!/usr/bin/python3
+def weight_average(my_list=[]):
+    if my_list == [] or my_list is None:
+        return (0)
+    res = 0
+    res2 = 0
+    for x, y in my_list:
+        res += x * y
+        res2 += y
+    return (res / res2)
